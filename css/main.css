@@ -308,6 +308,7 @@ h1.navbar-brand {
 
 
 #home-slider {
+    height: 200px;
     position: relative;
     padding: 0;
 }
