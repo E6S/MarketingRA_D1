@@ -6,12 +6,12 @@
 * Author : Muhammad Morshd
 * Author URI : http://morsheds.com
 *
-* --------------------------------------------------------------------------- 
+* ---------------------------------------------------------------------------
 *
 */
 
 /* =================================== */
-/*	Basic Style 
+/*	Basic Style
 /* =================================== */
 
 body {
@@ -93,21 +93,21 @@ main > section {
 		-ms-transform: translateZ(0);
 		 -o-transform: translateZ(0);
 			transform: translateZ(0);
-		  
+
 	-webkit-backface-visibility: hidden;
 	   -moz-backface-visibility: hidden;
 			backface-visibility: hidden;
-		  
+
 	-webkit-transition-property: color;
 	   -moz-transition-property: color;
 		-ms-transition-property: color;
 			transition-property: color;
-		  
+
 	-webkit-transition-duration: 0.3s;
 	   -moz-transition-duration: 0.3s;
 		-ms-transition-duration: 0.3s;
 			transition-duration: 0.3s;
-		  
+
 	-moz-osx-font-smoothing: grayscale;
 }
 
@@ -120,27 +120,27 @@ main > section {
 	right: 0;
 	bottom: 0;
 	background: #fff;
-	
+
 	-webkit-transform: scaleX(0);
 	   -moz-transform: scaleX(0);
 		-ms-transform: scaleX(0);
 			transform: scaleX(0);
-			
+
 	-webkit-transform-origin: 0 50%;
 	   -moz-transform-origin: 0 50%;
 		-ms-transform-origin: 0 50%;
 			transform-origin: 0 50%;
-			
+
 	-webkit-transition-property: transform;
 	   -moz-transition-property: transform;
 		-ms-transition-property: transform;
 			transition-property: transform;
-			
+
 	-webkit-transition-duration: 0.3s;
 	   -moz-transition-duration: 0.3s;
 		-ms-transition-duration: 0.3s;
 			transition-duration: 0.3s;
-			
+
 	-webkit-transition-timing-function: ease-out;
 	   -moz-transition-timing-function: ease-out;
 		-ms-transition-timing-function: ease-out;
@@ -279,13 +279,13 @@ main > section {
          -o-transition: all 0.8s ease 0s;
             transition: all 0.8s ease 0s;
 
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0,0,0);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     padding: 5px 0;
 }
 
 #navigation.animated-header {
-    padding: 20px 0;
+    padding: 0px 0;
 }
 
 h1.navbar-brand {
@@ -308,7 +308,6 @@ h1.navbar-brand {
 
 
 #home-slider {
-    height: 200px;
     position: relative;
     padding: 0;
 }
@@ -1445,3 +1444,4 @@ textarea.form-control {
         width: 380px;
     }
 }
+
