@@ -13,14 +13,36 @@
 /* =================================== */
 /*	Basic Style
 /* =================================== */
-
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
 body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
     line-height: 24px;
     font-size: 16px;
     color: #818181;
+
 }
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 
 figure, p, address {
     margin: 0;
@@ -69,6 +91,12 @@ main > section {
     box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
     padding: 15px 55px;
     color: #fff;
+}
+
+.btn-white {
+    background-color: teal;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
+    color: white
 }
 
 .btn-border {
@@ -186,6 +214,9 @@ main > section {
     bottom: 0;
     position: absolute;
     width: 115px;
+    margin:auto;
+    left:0;
+    right:0;
 }
 
 .sec-title.white h2:after {
@@ -314,6 +345,7 @@ h1.navbar-brand {
 
 .sl-slider-wrapper {
     width: 100%;
+    height:664px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -341,50 +373,6 @@ h1.navbar-brand {
     z-index: 1;
 }
 
-.slide-caption {
-    color: #fff;
-    display: table;
-    height: 100%;
-    left: 0;
-    min-height: 100%;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 100%;
-    z-index: 11;
-}
-
-.slide-caption .caption-content {
-    vertical-align: middle;
-    display: table-cell;
-    opacity: 70%;
-
-}
-
-.caption-content h2 {
-    color: #fff;
-    font-size: 52px;
-    font-weight: 400;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    background-color: teal;
-    opacity: 70%;
-}
-
-.caption-content > span {
-    display: block;
-    font-size: 24px;
-    margin-bottom: 45px;
-    text-transform: capitalize;
-}
-
-.caption-content p {
-    font-size: 29px;
-    margin-bottom: 65px;
-}
-
-/* The duplicate parts/slices */
-
 .sl-content-slice {
     overflow: hidden;
     position: absolute;
@@ -399,6 +387,61 @@ h1.navbar-brand {
     backface-visibility: hidden;
     opacity : 1;
 }
+
+.slide-caption {
+    color: black;
+    display: table;
+    height: 100%;
+    left: 0;
+    min-height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+}
+
+.slide-caption .caption-content {
+    vertical-align: middle;
+    display: table-cell;
+    opacity: 90%;
+    padding-bottom:30px;
+}
+.mrg-btm{margin-bottom:20px;}
+.header {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: white;
+}
+
+.caption-content h2 {
+    color: white;
+    font-size: 70px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-transform: none;
+}
+
+.caption-content > span {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 45px;
+    text-transform: capitalize;
+}
+
+.caption-content p {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 65px;
+}
+
 
 /* Horizontal slice */
 
@@ -456,6 +499,16 @@ h1.navbar-brand {
     width: 100%;
     height: 100%;
 }
+
+/* Default styles for background colors */
+.sl-slide-horizontal .sl-slide-inner {
+    background: #ddd;
+}
+
+.sl-slide-vertical .sl-slide-inner {
+    background: #ccc;
+}
+
 
 /* Default styles for background colors
 
@@ -516,12 +569,12 @@ h1.navbar-brand {
 ==================================================================*/
 
 #about {
-    background-color: teal;
-    color: #fff;
+    background-color: white;
+    color: black;
 }
 
 #about h3 {
-    color: #fff;
+    color: black;
     margin: 0 0 35px;
     text-transform: uppercase;
 }
@@ -538,6 +591,7 @@ h1.navbar-brand {
 }
 
 #about .message-body {
+    color: black;
     font-size: 13px;
     line-height: 20px;
     margin-bottom: 70px;
@@ -895,6 +949,11 @@ ul.external li a:hover {
     color: #fff;
 }
 
+/*=================================================================
+    Benefits
+==================================================================*/
+
+.service-item{margin-bottom:30px; margin-top: 20px;}
 
 /*=================================================================
 	Price
@@ -954,7 +1013,6 @@ ul.external li a:hover {
 .input-field {
     margin-bottom: 10px;
 }
-
 .form-control {
     border: 1px solid #ececec;
     border-radius: 0;
@@ -1181,6 +1239,7 @@ textarea.form-control {
 
 /* about */
     .recent-works {
+        color: black;
         margin-bottom: 50px;
     }
 
@@ -1227,18 +1286,22 @@ textarea.form-control {
     body {
         font-size: 14px;
     }
-
+    .mrg-btm{margin-bottom:80px;}
+    .btn-center{text-align: center;}
     .parallax {
         background-position: centet tip !important;
     }
 
+    .sl-slider-wrapper {
+        height: 500px;
+    }
     .sec-title h2 {
         font-size: 25px;
     }
 
-    .sec-title h2:after {
+    /*.sec-title h2:after {
         left: 30%;
-    }
+    }*/
 
 /*navigation*/
     .navbar-inverse .navbar-toggle {
@@ -1271,6 +1334,7 @@ textarea.form-control {
 
 /* about */
     .recent-works {
+        color: black;
         margin-bottom: 85px;
     }
 
@@ -1370,9 +1434,9 @@ textarea.form-control {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
-    .sec-title h2:after {
+    /*.sec-title h2:after {
         left: 38%;
-    }
+    }*/
 
 /* home slider */
     .caption-content h2 {
@@ -1390,6 +1454,7 @@ textarea.form-control {
 /*about*/
 
     #about .welcome-block h3 {
+        background: white;
         margin: 0 0 35px;
     }
 
