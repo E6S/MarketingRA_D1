@@ -82,7 +82,20 @@ $(function() {
 
 
 $(document).ready(function(){
-
+    $('#signup_button').on('click',function(){
+        $('html, body').animate({
+            scrollTop: $("#formBanner").offset().top -75
+        }, 500);
+    });
+    $("#formBanner").on("submit",function(e) {
+        e.preventDefault(); // cancel submission
+        redirectToQualtrics($('#formBanner').serialize())
+    });
+    function redirectToQualtrics(data) {
+        let qualtricsURL = 'https://usc.qualtrics.com/jfe/form/SV_514Gn6XDolrEG3P',
+            stringToAppend='?'+data;
+        window.location.replace(qualtricsURL+stringToAppend);
+    }
 	/* ========================================================================= */
 	/*	Menu item highlighting
 	/* ========================================================================= */
@@ -118,11 +131,12 @@ $(document).ready(function(){
 
     // Slider Height
     var slideHeight = $(window).height();
+    var slideHeightmobile = $('.slide-caption').height();
     
-    $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
+    $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeightmobile);
 
-    $(window).resize(function(){'use strict',
-        $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
+    $(window).resize(function(){
+        $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeightmobile);
     });
 	
 	
