@@ -981,7 +981,7 @@ ul.external li a:hover {
 }
 
 .social-button li:nth-child(2) {
-    margin: 0 75px;
+    margin: 0 75px 75px 0;
 }
 
 .social-button li a {
