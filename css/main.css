@@ -407,7 +407,8 @@ h1.navbar-brand {
     opacity: 90%;
     padding-bottom:30px;
 }
-.mrg-btm{margin-bottom:20px;}
+.mrg-btm{margin-bottom:50px;}
+.mrg-btm20{margin-bottom:20px;}
 .header {
     color: #fff;
     font-size: 30px;
